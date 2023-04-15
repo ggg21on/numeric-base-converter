@@ -8,17 +8,12 @@ github_text = '<a href="https://github.com/ggg21on/numeric-base-converter" targe
 linkedin_icon = '<a href="https://www.linkedin.com/in/gabriel-gomes-574287258/" target="_blank"><img src="https://img.icons8.com/fluent/48/000000/linkedin.png"/></a>'
 linkedin_text = '<a href="https://www.linkedin.com/in/gabriel-gomes-574287258/" target="_blank" style="font-size: 1.2em; margin-left: 0.5em;">LinkedIn</a>'
 
-st.sidebar.markdown(linkedin_icon + linkedin_text, unsafe_allow_html=True)
+st.sidebar.markdown(linkedin_icon + linkedin_text)
 
 github_link = f'<div style="display: flex; align-items: center;">{github_icon}{github_text}</div>'
 
-st.sidebar.markdown(github_link, unsafe_allow_html=True)
+st.sidebar.markdown(github_link)
 
-st.markdown('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">', unsafe_allow_html=True)
-
-st.markdown("""
-
-""", unsafe_allow_html=True)
 options = ['Binary', 'Octal', 'Decimal', 'Hexadecimal']
 # This is header
 st.header('Numerical Base Conversion Calculator :computer:')
@@ -69,7 +64,7 @@ if st.button('Convert'):
             f'O valor {entrada_valor} na base {entrada_base} é igual a {valor_saida} na base {saida_base}')
 
     except ValueError:
-        st.write('O valor de entrada é inválido para a base selecionada!', unsafe_allow_html=True)
+        st.write('Input value is invalid for selected base!')
 
 st.subheader('Equivalence Table')
 # table
@@ -83,7 +78,3 @@ data = {'Decimal': decimals, 'Octal': octals,
 df = pd.DataFrame(data)
 
 st.table(df)
-
-st.markdown("""
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-""", unsafe_allow_html=True)
