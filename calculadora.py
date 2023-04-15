@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 import streamlit.components.v1 as components
 
-options = ['Binary', 'Octal', 'Decimal', 'Hexadecimal']
+bases = ['Binary', 'Octal', 'Decimal', 'Hexadecimal']
 # This is header
 st.header('Numerical Base Conversion Calculator :computer:')
 # This subheader
