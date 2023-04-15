@@ -20,6 +20,7 @@ saida_base = st.selectbox('Selct outpat basis', bases)
 
 # Entrada
 if st.button('Convert'):
+    valor_saida = ''
     try:
         # Converter entrada para decimal
         if entrada_base == 'Binary':
@@ -49,7 +50,7 @@ if st.button('Convert'):
 
         # Exibir resultado
         st.write(f'The value {entrada_valor} at the base {entrada_base} its the same as {valor_saida}  at the base {saida_base}')
-
+        
     except ValueError:
         st.write('Input value is invalid for selected base!',
                  unsafe_allow_html=True)
