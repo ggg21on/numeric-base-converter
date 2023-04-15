@@ -16,11 +16,10 @@ bases = ['Binary', 'Octal', 'Decimal', 'Hexadecimal']
 entrada_base = st.selectbox('Select input base:', bases)
 entrada_valor = st.number_input('Select input value:', step=1)
 
-saida_base = st.selectbox('Selct outpat basis', bases)
+saida_base = st.selectbox('Select outpat basis', bases)
 
 # Entrada
 if st.button('Convert'):
-    valor_saida = ''
     try:
         # Converter entrada para decimal
         if entrada_base == 'Binary':
