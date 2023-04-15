@@ -66,10 +66,11 @@ if st.button('Convert'):
 
         # Exibir resultado
         st.write(
-            f'O valor {entrada_valor} na base {entrada_base} é igual a {valor_saida} na base {saida_base}')
+            f'The value {entrada_valor} at the base {entrada_base} its the same as {valor_saida}  at the base {saida_base}')
 
     except ValueError:
-        st.write('O valor de entrada é inválido para a base selecionada!', unsafe_allow_html=True)
+        st.write('O valor de entrada é inválido para a base selecionada!',
+                 unsafe_allow_html=True)
 
 st.subheader('Equivalence Table')
 # table
