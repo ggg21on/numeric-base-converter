@@ -2,7 +2,6 @@ import pandas as pd
 import streamlit as st
 import streamlit.components.v1 as components
 
-bases = ['Binary', 'Octal', 'Decimal', 'Hexadecimal']
 # This is header
 st.header('Numerical Base Conversion Calculator :computer:')
 # This subheader
@@ -35,7 +34,7 @@ if st.button('Convert'):
             valor_decimal = int(str(entrada_valor), 16)
 
         # Converter decimal para saída
-        if saida_base == 'Binário':
+        if saida_base == 'Binary':
             valor_saida = bin(valor_decimal)[2:]
 
         elif saida_base == 'Octal':
@@ -48,7 +47,7 @@ if st.button('Convert'):
             valor_saida = hex(valor_decimal)[2:]
 
         # Exibir resultado
-        st.write(f'The value {entrada_valor} at the base {entrada_base} its the same as {valor_saida}  at the base {saida_base}')
+        st.write(f'The value {entrada_valor} at the base {entrada_base} is the same as {valor_saida}  at the base {saida_base}')
         
     except ValueError:
         st.write('Input value is invalid for selected base!',
