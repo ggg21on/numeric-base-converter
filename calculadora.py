@@ -52,7 +52,7 @@ if st.button('Convert'):
             f'The value {entrada_valor} at the base {entrada_base} its the same as {valor_saida}  at the base {saida_base}')
 
     except ValueError:
-        st.write('O valor de entrada é inválido para a base selecionada!',
+        st.write('Input value is invalid for selected base!',
                  unsafe_allow_html=True)
 
 st.subheader('Equivalence Table')
