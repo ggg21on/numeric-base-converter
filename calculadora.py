@@ -48,8 +48,7 @@ if st.button('Convert'):
             valor_saida = hex(valor_decimal)[2:]
 
         # Exibir resultado
-        st.write(
-            f'The value {entrada_valor} at the base {entrada_base} its the same as {valor_saida}  at the base {saida_base}')
+        st.write(f'The value {entrada_valor} at the base {entrada_base} its the same as {valor_saida}  at the base {saida_base}')
 
     except ValueError:
         st.write('Input value is invalid for selected base!',
