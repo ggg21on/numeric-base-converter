@@ -2,7 +2,6 @@ import pandas as pd
 import streamlit as st
 import streamlit.components.v1 as components
 
-
 github_icon = '<a href="https://github.com/ggg21on/numeric-base-converter" target="_blank"><img src="https://img.icons8.com/fluent/48/000000/github.png"/></a>'
 github_text = '<a href="https://github.com/ggg21on/numeric-base-converter" target="_blank" style="font-size: 1.2em; margin-left: 0.5em;">Source Code</a>'
 linkedin_icon = '<a href="https://www.linkedin.com/in/gabriel-gomes-574287258/" target="_blank"><img src="https://img.icons8.com/fluent/48/000000/linkedin.png"/></a>'
@@ -20,9 +19,7 @@ st.header('Numerical Base Conversion Calculator :computer:')
 # This subheader
 st.markdown('<h1 style="font-size:16px;">A number base calculator is a tool designed to perform mathematical calculations involving numbers in different number systems, such as the decimal, binary, octal, or hexadecimal system.</h1>', unsafe_allow_html=True)
 
-
 bases = ['Binary', 'Octal', 'Decimal', 'Hexadecimal']
-
 
 # Selection
 entrada_base = st.selectbox('Select input base:', bases)
