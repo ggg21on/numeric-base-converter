@@ -3,8 +3,8 @@ import streamlit as st
 import streamlit.components.v1 as components
 
 
-github_icon = '<a href="https://github.com/ggg21on" target="_blank"><img src="https://img.icons8.com/fluent/48/000000/github.png"/></a>'
-github_text = '<a href="https://github.com/ggg21on" target="_blank" style="font-size: 1.2em; margin-left: 0.5em;">Source Code</a>'
+github_icon = '<a href="https://github.com/ggg21on/numeric-base-converter" target="_blank"><img src="https://img.icons8.com/fluent/48/000000/github.png"/></a>'
+github_text = '<a href="https://github.com/ggg21on/numeric-base-converter" target="_blank" style="font-size: 1.2em; margin-left: 0.5em;">Source Code</a>'
 linkedin_icon = '<a href="https://www.linkedin.com/in/gabriel-gomes-574287258/" target="_blank"><img src="https://img.icons8.com/fluent/48/000000/linkedin.png"/></a>'
 linkedin_text = '<a href="https://www.linkedin.com/in/gabriel-gomes-574287258/" target="_blank" style="font-size: 1.2em; margin-left: 0.5em;">LinkedIn</a>'
 
