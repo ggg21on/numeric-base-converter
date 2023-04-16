@@ -33,6 +33,9 @@ if st.button('Convert'):
         elif entrada_base == 'Hexadecimal':
             valor_decimal = int(str(entrada_valor), 16)
 
+        elif entrada_base == 'Sexagesimal':
+            valor_decimal = int(str(entrada_valor), 60)
+
         # Converter decimal para saída
         if saida_base == 'Binary':
             valor_saida = bin(valor_decimal)[2:]
@@ -61,7 +64,8 @@ st.subheader('Equivalence Table')
 decimals = list(range(17))
 octals = [oct(i)[2:] for i in decimals]
 binaries = [bin(i)[2:].zfill(5) for i in decimals]
-hexadecimals = [oct(i)[2:].upper() for i in decimals]
+hexadecimals = [hex(i)[2:].upper() for i in decimals]
+sexagesimals = [divmod(i)[2:].upper() for i in decimals]
 
 data = {'Decimal': decimals, 'Octal': octals,
         'Binary': binaries, 'Hexadecimal': hexadecimals}
