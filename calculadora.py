@@ -49,11 +49,10 @@ if st.button('Convert'):
             f'The value {entrada_valor} at the base {entrada_base} is the same as {valor_saida}  at the base {saida_base}')
 
     except ValueError:
-        st.write('Input value is invalid for selected base!',
-                 unsafe_allow_html=True)
-# title table
+        st.write('\033[1;32m' + f'Input value is invalid for selected base!')
+#title table
 st.subheader('Equivalence Table')
-# table
+#table
 decimals = list(range(17))
 octals = [oct(i)[2:] for i in decimals]
 binaries = [bin(i)[2:].zfill(5) for i in decimals]
