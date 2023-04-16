@@ -3,7 +3,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 
 # This is header
-st.header('Numerical Base Conversion Calculator :computer:')
+st.write('<span style="color: red;">Este texto é vermelho!</span>', unsafe_allow_html=True)
 # This subheader
 st.markdown('<h1 style="font-size:16px;">A number base calculator is a tool designed to perform mathematical calculations involving numbers in different number systems, such as the decimal, binary, octal, or hexadecimal system.</h1>', unsafe_allow_html=True)
 
@@ -49,7 +49,7 @@ if st.button('Convert'):
             f'The value {entrada_valor} at the base {entrada_base} is the same as {valor_saida}  at the base {saida_base}')
 
     except ValueError:
-        st.write('\033[1;32m' + f'Input value is invalid for selected base!')
+        st.write('Input value is invalid for selected base!')
 #title table
 st.subheader('Equivalence Table')
 #table
