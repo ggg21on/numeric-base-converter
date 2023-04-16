@@ -8,7 +8,7 @@ st.header('Numerical Base Conversion Calculator :computer:')
 st.markdown('<h1 style="font-size:16px;">A number base calculator is a tool designed to perform mathematical calculations involving numbers in different number systems, such as the decimal, binary, octal, or hexadecimal system.</h1>', unsafe_allow_html=True)
 
 
-bases = ['Binary', 'Octal', 'Decimal', 'Hexadecimal']
+bases = ['Binary', 'Octal', 'Decimal', 'Hexadecimal', 'Sexagesimal']
 
 
 # Selection
@@ -45,6 +45,9 @@ if st.button('Convert'):
 
         elif saida_base == 'Hexadecimal':
             valor_saida = hex(valor_decimal)[2:]
+
+        elif saida_base == 'Sexagesimal':
+            valor_saida = divmod(valor_decimal)[2:]
 
         # Exibir resultado
         st.write(f'The value {entrada_valor} at the base {entrada_base} is the same as {valor_saida}  at the base {saida_base}')
