@@ -49,7 +49,7 @@ if st.button('Convert'):
             f'The value {entrada_valor} at the base {entrada_base} is the same as {valor_saida}  at the base {saida_base}')
 
     except ValueError:
-       st.write('<span style="color: red;">Este texto é vermelho!</span>', unsafe_allow_html=True)
+            st.markdown('<span style="color: red;">Input value is invalid for selected base!</span>')
 #title table
 st.subheader('Equivalence Table')
 #table
