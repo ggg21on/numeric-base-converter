@@ -15,10 +15,10 @@ entrada_valor = st.number_input('Select input value:', step=1)
 
 saida_base = st.selectbox('Select outpat basis', bases)
 
-# Entrada
+# Input
 if st.button('Convert'):
     try:
-        # Converter entrada para decimal
+        # Convert input to decimal
         if entrada_base == 'Binary':
             valor_decimal = int(str(entrada_valor), 2)
 
@@ -31,7 +31,7 @@ if st.button('Convert'):
         elif entrada_base == 'Hexadecimal':
             valor_decimal = int(str(entrada_valor), 16)
 
-        # Converter decimal para saída
+        # Convert decimal to output
         if saida_base == 'Binary':
             valor_saida = bin(valor_decimal)[2:]
 
@@ -44,15 +44,17 @@ if st.button('Convert'):
         elif saida_base == 'Hexadecimal':
             valor_saida = hex(valor_decimal)[2:]
 
-        # Exibir resultado
+        # Show result
         st.write(
             f'The value {entrada_valor} at the base {entrada_base} is the same as {valor_saida}  at the base {saida_base}')
 
     except ValueError:
             st.markdown('Input value is invalid for selected base!')
-#title table
+
+# title table equivalence
 st.subheader('Equivalence Table')
-#table
+
+# table equivalence
 decimals = list(range(17))
 octals = [oct(i)[2:] for i in decimals]
 binaries = [bin(i)[2:].zfill(5) for i in decimals]
@@ -63,11 +65,6 @@ data = {'Decimal': decimals, 'Octal': octals,
 df = pd.DataFrame(data)
 
 st.table(df)
-
-video_file = open('stars.mp4', 'rb')
-video_bytes = video_file.read()
-
-st.video(video_bytes)
 
 
 
